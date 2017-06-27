@@ -42,13 +42,13 @@ app.use(cookieParser('keyboard cat'));
 
 
 
-const session = require('express-session');
-const RedisStore = require('connect-redis')(session);
-var options = {
-    "host": "127.0.0.1",
-    "port": "6379",
-    "ttl": 60 * 60 * 24 * 30,   //Session的有效期为30天
-};
+// const session = require('express-session');
+// const RedisStore = require('connect-redis')(session);
+// var options = {
+//     "host": "127.0.0.1",
+//     "port": "6379",
+//     "ttl": 60 * 60 * 24 * 30,   //Session的有效期为30天
+// };
 /*app.use(session({
     secret: 'keyboard cat',
     resave: true,
@@ -56,10 +56,10 @@ var options = {
     cookie: {secure: false},
     name: 'sessionid'
 }));*/
-app.use(session({
-    store: new RedisStore(options),
-    secret: 'keyboard cat'
-}))
+// app.use(session({
+//     store: new RedisStore(options),
+//     secret: 'keyboard cat'
+// }))
 
 // 登录拦截
 app.use('/users', function (req, res, next) {

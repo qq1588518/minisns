@@ -159,9 +159,53 @@ body{
     }
 }
 
+/** 问答列表 **/
+.qt-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.qt-item{
+  padding: 10px 0;
+}
+.qt-item:before,
+.qt-item:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.qt-item .qt-rank{
+  width: 100px;
+  float: left;
+}
+.qt-item .qt-rank .qt-view,
+.qt-item .qt-rank .qt-answers{
+  width: 50px;
+  float: left;
+  text-align: center;
+}
+.qt-item .qt-rank .num,
+.qt-item .qt-rank .text{
+  margin: 0;
+}
+.qt-item .qt-summary{
+  overflow: auto;
+}
+.qt-item .qt-summary .qt-title{
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  color: #2E3434;
+}
+.author-info .author-name{
+  margin-right: 10px;
+}
+.author-info .push-time{
+  color: #777;
+}
 
 /** 标签 **/
-/*文本颜色*/
 .m-label {
   display: inline;
   padding: 3px 7px;
